@@ -2,11 +2,12 @@ package com.example.polarbookshop.persistence;
 
 import com.example.polarbookshop.domain.Book;
 import com.example.polarbookshop.domain.BookRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
-
+@Repository
 public class InMemoryBookRepository implements BookRepository {
 
     private static final Map<String, Book> books = new ConcurrentHashMap<>();
