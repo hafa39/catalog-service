@@ -1,0 +1,4 @@
+GET http://localhost:9001
+
+### refresh config
+POST http://localhost:9001/actuator/refresh
