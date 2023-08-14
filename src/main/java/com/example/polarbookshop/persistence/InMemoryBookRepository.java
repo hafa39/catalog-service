@@ -1,3 +1,4 @@
+/*
 package com.example.polarbookshop.persistence;
 
 import com.example.polarbookshop.domain.Book;
@@ -38,3 +39,4 @@ public class InMemoryBookRepository implements BookRepository {
         books.remove(isbn);
     }
 }
+*/
