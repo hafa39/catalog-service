@@ -2,6 +2,7 @@ package com.example.polarbookshop.demo;
 
 import com.example.polarbookshop.domain.Book;
 import com.example.polarbookshop.domain.BookRepository;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
@@ -16,7 +17,7 @@ public class BookDataLoader {
     public BookDataLoader(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
-    @EventListener
+    @EventListener(ApplicationReadyEvent.class)
     public void loadTestData(){
         bookRepository.deleteAll();
         var book1 = Book.of("1234567891", "Northern Lights", "Lyra Silverstar", 9.90, "Polarsophia");
